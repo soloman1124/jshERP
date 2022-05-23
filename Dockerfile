@@ -49,3 +49,4 @@ FROM nginx:1.20.2-alpine AS web
 WORKDIR /usr/src/app
 
 COPY --from=build /usr/src/app/web /usr/share/nginx/html
+COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf

@@ -1,6 +1,7 @@
 version: "3.7"
 services:
   app:
+    image: soloman1124/jsh-erp:app
     build:
       context: .
       target: app
@@ -14,6 +15,7 @@ services:
       - ./.data/app/logs:/usr/src/app/logs.home_IS_UNDEFINED
       - ./docker/application.properties:/usr/src/app/application.properties
   web:
+    image: soloman1124/jsh-erp:web
     build:
       context: .
       target: web
